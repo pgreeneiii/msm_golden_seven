@@ -1,0 +1,15 @@
+<div class="container">
+   <h1>Actors</h1>
+
+   <% @actors.each do |actor| %>
+
+      <div class="row">
+         <div class="col-md-offset-3 col-md-6" style="text-align:center;">
+            <h4><%= actor.name %></h4>
+            <img src="<%= actor.image_url %>" style="height:350px;">
+         </div>
+      </div>
+
+   <% end %>
+
+</div>
