@@ -17,7 +17,18 @@ Rails.application.routes.draw do
 
   #director routes
   get("/directors", {:controller => "directors", :action => "index"})
+  get("/directors/new", {:controller => "directors", :action => "new_form"})
+  get("/create_director", {:controller => "directors", :action => "new_row"})
+
+  get("/directors/:id", {:controller => "directors", :action => "details"})
+
+  get("directors/edit/:id", {:controller => "directors", :action => "edit_form"})
+  get("/update_director/:id", {:controller => "directors", :action => "update_director"})
+
+  get("/delete_director/:id", {:controller => "directors", :action => "delete_row"})
 
   #actor routes
   get("/actors", {:controller => "actors", :action => "index"})
+
+
 end
